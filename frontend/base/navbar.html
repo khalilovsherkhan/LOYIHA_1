@@ -66,9 +66,9 @@
                             <li class="nav-item">
                                 <a class="nav-link color-pink-hover" href="{% url 'home' %}">Home</a>
                             </li>
-                            {% for data in navbar %}
+                            {% for data in categories %}
                             <li class="nav-item">
-                                <a class="nav-link color-pink-hover" href="{{ data.get_absolute_url }}">{{data.title}}</a>
+                                <a class="nav-link color-pink-hover" href="?category={{data.name}}">{{data.name}}</a>
                             </li>
                             {% endfor %}
                         </ul>
